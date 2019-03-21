@@ -15,9 +15,7 @@ imagen.onclick = function(){
 
 var boton = document.querySelector('button');
 var titulo = document.querySelector('h1');
-boton.onclick = function(){
-	cambiarNombre();
-}
+
 function cambiarNombre(){
 	var usuario = prompt('Ingresa tu nombre: ');
 	localStorage.setItem('nombre', usuario);
@@ -30,4 +28,8 @@ if(!localStorage.getItem('nombre')){
 else{
 	var nombreAl = localStorage.getItem('nombre');
 	titulo.textContent = nombreAl + ' la mejor Gorilla Fan';
+}
+
+boton.onclick = function(){
+	cambiarNombre();
 }
